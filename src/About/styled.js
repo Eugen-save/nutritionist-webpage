@@ -17,13 +17,12 @@ export const Poster = styled.div`
     background-image: url("${poster}");
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 8px 8px 34px -10px rgba(24, 24, 27, 1);
+    box-shadow:  8px 8px 34px -10px rgba(24, 24, 27, 1);
 `;
 
 export const InfoWrapper = styled.div`
     background-color: ${({theme}) => theme.colors.white};
     height: 853px;
-    border-radius: 0 150px 0 150px;
     box-shadow: 8px 8px 34px -10px rgba(24, 24, 27, 1);
     display: flex;
     justify-content: center;
