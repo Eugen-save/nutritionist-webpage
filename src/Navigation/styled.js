@@ -5,7 +5,6 @@ export const NavigationBar = styled.nav`
     width: 100%;
     height: 150px;
     box-shadow: 1px 17px 42px -19px rgba(24, 24, 27, 1);
-    background-color: ${({theme}) => theme.colors.white};
     top: 0;
     display: flex;
     align-items: center;
