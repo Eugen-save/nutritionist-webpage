@@ -7,15 +7,15 @@ export const Section = styled.section`
     margin-top: 120px;
     display: grid;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     padding: 20px;
-    grid-template-areas: ". head ."
-                        "section1 section2 section3";
+    grid-template-areas: "head head"
+                        "section1 section2";
 `;
 
 export const SectionHeader = styled.h2`
-    font-size: 50px;
+    font-size: 64px;
     line-height: 75px;
     letter-spacing: 0.05em;
     grid-area: head;
@@ -33,22 +33,27 @@ export const SectionItem = styled.div`
         section2 && css`
             grid-area: section2;
     `}
-
-    ${({section3}) =>
-        section3 && css`
-            grid-area: section3;
-    `}
 `;
 
 export const SubHeader = styled.h3`
     color: ${({theme}) => theme.colors.jade};
     text-align: center;
+    font-size: 32px;
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
     font-size: 20px;
     line-height: 30px;
     text-align: center;
     letter-spacing: 0.105em;
     font-weight: 300;
+`;
+
+export const List = styled.ul`
+    font-size: 24px;
+    list-style-type: none;
+`;
+
+export const ListItem = styled.li`
+    padding: 10px;
 `;
