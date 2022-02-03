@@ -90,3 +90,40 @@ export const Text = styled.p`
     font-size: 20px;
 `;
 
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    width: 500px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    gap: 20px;
+`;
+
+export const Input = styled.input`
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    padding: 10px;
+
+    ::placeholder {
+        color: ${({theme}) => theme.colors.white};
+    }
+`;
+
+export const Textarea = styled.textarea`
+    border: none;
+    border-bottom: 1px solid #fff;
+    resize: vertical;
+    background: none;
+`;
+
+export const Submit = styled.input`
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background: ${({theme}) => theme.colors.white};
+    width: 200px;
+    color: ${({theme}) => theme.colors.jade};
+`;
