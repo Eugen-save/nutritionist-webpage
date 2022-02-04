@@ -21,6 +21,7 @@ export const SectionHeader = styled.h2`
     grid-area: head;
     margin: 0;
     text-align: center;
+    color: ${({theme}) => theme.colors.white}
 `;
 
 export const SectionItem = styled.div`
