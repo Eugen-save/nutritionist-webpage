@@ -1,4 +1,3 @@
-import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import {ReactComponent as LogoImg} from "./logo.svg";
 
