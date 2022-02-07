@@ -1,53 +1,30 @@
-import { Header, HeaderSubTitle, HeaderTitle, HeaderWrapper, Logo, Menu, MenuItem, NavigationBar } from "./styled";
-import { Link, animateScroll as scroll } from "react-scroll";
+
+import { useEffect, useState } from "react";
+import { MenuLarge } from "./MenuLarge";
+import { MenuMobile } from "./MenuMobile";
 
 
-export const Navigation = () => (
-    <NavigationBar>
-        <HeaderWrapper>
-            <Logo />
-            <Header>
-                <HeaderTitle>Аксютик Валентина</HeaderTitle>
-                <HeaderSubTitle>Диетолог • Нутрициолог</HeaderSubTitle>
-            </Header>
-        </HeaderWrapper>
-        <Menu>
-            <MenuItem>
-                <Link
-                    activeClass="active"
-                    to="About"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                >
-                    Обо мне
-                </Link>
-            </MenuItem>
-            <MenuItem>
-                <Link
-                    activeClass="active"
-                    to="service"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                >
-                    Услуги
-                </Link>
-            </MenuItem>
-            <MenuItem>
-                <Link
-                    activeClass="active"
-                    to="contacts"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                >
-                    Обратная связь
-                </Link>
-            </MenuItem>
-        </Menu>
-    </NavigationBar>
-)
+export const Navigation = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 767;
+
+    const [navToggled, setNavToggled] = useState(false);
+
+    const handleNavToggle = () => {
+      setNavToggled(!navToggled);
+    }
+
+    useEffect(() => {
+        const handleResizeWindow = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResizeWindow);
+        return () => {
+            window.removeEventListener("resize", handleResizeWindow);
+        };
+    }, []);
+
+    return (
+        <>
+        {width > breakpoint ? <MenuLarge /> :  <MenuMobile />}
+        </>
+    )
+}
