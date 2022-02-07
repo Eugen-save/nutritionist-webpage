@@ -8,6 +8,7 @@ export const theme = {
         curiousBlue: "#229ED9",
         azureRadiance: "#1877F2",
         rose: "#E60073",
-        cinnabar: "#EA4335"
+        cinnabar: "#EA4335",
+        salmon: "#ff8c69"
     }
 }
