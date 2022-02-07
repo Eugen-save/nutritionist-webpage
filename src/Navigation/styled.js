@@ -1,3 +1,4 @@
+import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import {ReactComponent as LogoImg} from "./logo.svg";
 
@@ -31,6 +32,7 @@ export const Header = styled.header`
     gap: 10px;
     text-transform: uppercase;
     text-align: center;
+    color: ${({theme}) => theme.colors.white};
 `;
 
 export const HeaderTitle = styled.h1`
@@ -55,4 +57,13 @@ export const Menu = styled.ul`
     list-style-type: none;
     flex-wrap: nowrap;
     gap: 30px;
+`;
+
+export const MenuItem = styled.li`
+    color: ${({theme}) => theme.colors.white};
+    cursor: pointer;
+
+    &:hover {
+        color: ${({theme}) => theme.colors.salmon};
+    }
 `;
