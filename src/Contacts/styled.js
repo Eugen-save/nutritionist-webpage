@@ -1,7 +1,5 @@
-import styled, { css } from "styled-components";
-import {ReactComponent as InstagramIcon} from "./instagramLogo.svg";
-import {ReactComponent as FacebookIcon} from "./facebookLogo.svg";
-import {ReactComponent as TelegramIcon} from "./telegramLogo.svg";
+import styled from "styled-components";
+import poster2 from "./poster2.jpg";
 
 export const Section = styled.section`
     max-width: 1368px;
@@ -13,7 +11,9 @@ export const Section = styled.section`
 export const Wrapper = styled.div`
     display: grid;
     align-items: start;
-    grid-template-columns: auto auto;
+    grid-template-columns: 467px 467px;
+    justify-content: center;
+    gap: 40px;
 `;
 
 export const Form = styled.form`
@@ -21,26 +21,28 @@ export const Form = styled.form`
     flex-direction: column;
     border-radius: 15px;
     border: 4px solid #fff;
-    width: 500px;
+    width: 400px;
+    height: 600px;
     padding: 20px;
     flex-wrap: nowrap;
     gap: 20px;
+    background-color: rgba(255,255,255,0.5);
 `;
 
 export const Input = styled.input`
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid ${({theme}) => theme.colors.woodsmoke};
     background: none;
-    padding: 10px;
+    padding: 20px;
+    color: ${({theme}) => theme.colors.woodsmoke};
 
-    ::placeholder {
-        color: ${({theme}) => theme.colors.white};
+
     }
 `;
 
 export const Textarea = styled.textarea`
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid ${({theme}) => theme.colors.woodsmoke};
     resize: vertical;
     background: none;
 `;
@@ -49,9 +51,12 @@ export const Submit = styled.input`
     border: none;
     border-radius: 15px;
     padding: 10px;
-    background: ${({theme}) => theme.colors.white};
+    background: ${({theme}) => theme.colors.jade};
     align-items: center;
-    color: ${({theme}) => theme.colors.jade};
+    color: ${({theme}) => theme.colors.white};
+    padding: 20px;
+    font-size: 20px;
+    width: 200px;
 `;
 
 export const SectionHeader = styled.h2`
@@ -70,10 +75,11 @@ export const SubHeader = styled.h3`
 
 export const LinksWrapper = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 `;
 
 export const Links = styled.a`
@@ -83,48 +89,20 @@ export const Links = styled.a`
     cursor: pointer;
     border-radius: 15px;
     transition: all .8s;
-
-    ${({gmail}) => 
-        gmail && css`
-            &:hover {
-                background-color: ${({theme}) => theme.colors.cinnabar};
-                box-shadow: 0 0 20px ${({theme}) => theme.colors.cinnabar};
-    }
-    `}
-
-    ${({telegram}) => 
-        telegram && css`
-            &:hover {
-                background-color: ${({theme}) => theme.colors.curiousBlue};
-                box-shadow: 0 0 20px ${({theme}) => theme.colors.curiousBlue};
-    }
-    `}
-
-    ${({facebook}) => 
-        facebook && css`
-            &:hover {
-                background-color: ${({theme}) => theme.colors.azureRadiance};
-                box-shadow: 0 0 20px ${({theme}) => theme.colors.azureRadiance};
-    }
-    `}
-
-    ${({instagram}) => 
-        instagram && css`
-            &:hover {
-                background-color: ${({theme}) => theme.colors.rose};
-                box-shadow: 0 0 20px ${({theme}) => theme.colors.rose};
-    }
-    `}
 `;
 
-export const Instagram = styled(InstagramIcon)`
-    fill: ${({theme}) => theme.colors.white};
+export const PosterContacts = styled.div`
+    width: 467px;
+    height: 700px;
+    background-image: url("${poster2}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:  8px 8px 34px -10px rgba(24, 24, 27, 1);
 `;
 
-export const Facebook = styled(FacebookIcon)`
-    fill: ${({theme}) => theme.colors.white};
-`;
-
-export const Telegram = styled(TelegramIcon)`
-    fill: ${({theme}) => theme.colors.white};
+export const FormWrapper = styled.div`
+    display: grid;
+    grid-template-rows: 600px auto;
+    gap: 20px;
+    justify-content: center;
 `;
