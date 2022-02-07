@@ -1,7 +1,7 @@
 import { Description, List, ListItem, Section, SectionHeader, SectionItem, SubHeader } from "./styled";
 
 export const Services = () => (
-    <Section>
+    <Section id="service">
         <SectionHeader>
             Мои услуги
         </SectionHeader>
