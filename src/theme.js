@@ -10,5 +10,9 @@ export const theme = {
         rose: "#E60073",
         cinnabar: "#EA4335",
         salmon: "#ff8c69"
-    }
+    },
+
+    breakpoint: {
+        mobileMax: "767px",
+      },
 }
