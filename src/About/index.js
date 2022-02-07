@@ -1,7 +1,7 @@
 import { Info, InfoWrapper, Main, Poster, Title } from "./styled";
 
 export const About = () => (
-    <Main>
+    <Main id="about">
         <Poster />
         <InfoWrapper>
             <Title>

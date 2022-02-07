@@ -44,3 +44,4 @@ export const Info = styled.p`
     text-align: center;
     letter-spacing: 0.105em;
 `;
+
