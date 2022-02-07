@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import background from "./brain-food.jpeg"
+import background from "./brain-food.jpeg";
+import backgroundMobile from "./backdropMobile.jpeg";
 
 export const BackdropContainer = styled.div`
     margin: 0 auto;
@@ -10,6 +11,11 @@ export const BackdropPoster = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     height: 797px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        height: 500px;
+        background-image: url("${backgroundMobile}");
+  }
 `;
 
 export const BackdropHeader = styled.header`
