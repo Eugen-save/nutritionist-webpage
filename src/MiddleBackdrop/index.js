@@ -1,3 +1,4 @@
+import { Link, animateScroll as scroll } from "react-scroll";
 import { 
     BlackRectangle, 
     Button, 
@@ -24,7 +25,16 @@ export const MiddleBackdrop = () => (
                 <ListItem>повысить стрессоустойчивость, иммунитет</ListItem>
             </List>
             <Button>
+            <Link
+                    activeClass="active"
+                    to="contacts"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
                 Записаться на консультацию
+                </Link>
             </Button>
             </WrapperInfo>
         </BlackRectangle>
