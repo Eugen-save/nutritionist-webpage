@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/nutritionist-webpage/static/js/main.8e197617.chunk.js",
-    "main.js.map": "/nutritionist-webpage/static/js/main.8e197617.chunk.js.map",
+    "main.js": "/nutritionist-webpage/static/js/main.4e93ddc8.chunk.js",
+    "main.js.map": "/nutritionist-webpage/static/js/main.4e93ddc8.chunk.js.map",
     "runtime-main.js": "/nutritionist-webpage/static/js/runtime-main.326e266f.js",
     "runtime-main.js.map": "/nutritionist-webpage/static/js/runtime-main.326e266f.js.map",
     "static/css/2.2bbe33c5.chunk.css": "/nutritionist-webpage/static/css/2.2bbe33c5.chunk.css",
@@ -13,13 +13,11 @@
     "static/css/2.2bbe33c5.chunk.css.map": "/nutritionist-webpage/static/css/2.2bbe33c5.chunk.css.map",
     "static/js/2.5fd63294.chunk.js.LICENSE.txt": "/nutritionist-webpage/static/js/2.5fd63294.chunk.js.LICENSE.txt",
     "static/media/about-img.3a30a35d.jpg": "/nutritionist-webpage/static/media/about-img.3a30a35d.jpg",
-    "static/media/backdropMobile.79ebf70a.jpeg": "/nutritionist-webpage/static/media/backdropMobile.79ebf70a.jpeg",
     "static/media/brain-food.53407865.jpeg": "/nutritionist-webpage/static/media/brain-food.53407865.jpeg",
     "static/media/facebookLogo.ab4101f5.svg": "/nutritionist-webpage/static/media/facebookLogo.ab4101f5.svg",
     "static/media/instagramLogo.93c3fdcb.svg": "/nutritionist-webpage/static/media/instagramLogo.93c3fdcb.svg",
     "static/media/logoWhite.f2388c66.png": "/nutritionist-webpage/static/media/logoWhite.f2388c66.png",
     "static/media/mailLogo.b9991b63.svg": "/nutritionist-webpage/static/media/mailLogo.b9991b63.svg",
-    "static/media/middle-poster.01f38eb2.jpg": "/nutritionist-webpage/static/media/middle-poster.01f38eb2.jpg",
     "static/media/poster2.77a2e3ec.jpg": "/nutritionist-webpage/static/media/poster2.77a2e3ec.jpg",
     "static/media/telegramLogo.019ec8f9.svg": "/nutritionist-webpage/static/media/telegramLogo.019ec8f9.svg"
   },
@@ -27,6 +25,6 @@
     "static/js/runtime-main.326e266f.js",
     "static/css/2.2bbe33c5.chunk.css",
     "static/js/2.5fd63294.chunk.js",
-    "static/js/main.8e197617.chunk.js"
+    "static/js/main.4e93ddc8.chunk.js"
   ]
 }
