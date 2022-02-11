@@ -2,7 +2,7 @@ import { Header, HeaderSubTitle, HeaderTitle, HeaderWrapper, Logo, Menu, MenuIte
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export const MenuLarge = () => (
-    <NavigationBar>
+    <>
         <HeaderWrapper>
             <Logo />
             <Header>
@@ -14,7 +14,7 @@ export const MenuLarge = () => (
             <MenuItem>
                 <Link
                     activeClass="active"
-                    to="About"
+                    to="about"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -48,5 +48,5 @@ export const MenuLarge = () => (
                 </Link>
             </MenuItem>
         </Menu>
-    </NavigationBar>
+        </>
 )

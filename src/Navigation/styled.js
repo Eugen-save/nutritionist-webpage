@@ -1,15 +1,23 @@
 import styled from "styled-components";
-import {ReactComponent as LogoImg} from "./logo.svg";
+import logo from "./logoWhite.png";
+import background from "./brain-food.jpeg";
+import backgroundMobile from "./backdropMobile.jpeg";
 
 export const NavigationBar = styled.nav`
     width: 100%;
     height: 150px;
-    box-shadow: 1px 17px 42px -19px rgba(24, 24, 27, 1);
     top: 0;
     display: flex;
     align-items: center;
     padding: 40px;
     justify-content: space-between;
+    position: absolute;
+    overflow: hidden;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        padding: 10px;
+        height: 50px;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
@@ -19,7 +27,9 @@ export const HeaderWrapper = styled.div`
     gap: 30px;
 `;
 
-export const Logo = styled(LogoImg)`
+export const Logo = styled.img.attrs({
+    src: `${logo}`
+})`
     width: 150px;
     height: 150px;
 `;
@@ -65,4 +75,86 @@ export const MenuItem = styled.li`
     &:hover {
         color: ${({theme}) => theme.colors.salmon};
     }
+`;
+
+export const BackdropPoster = styled.div`
+    background-image: url("${background}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 950px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        height: 300px;
+  }
+`;
+
+export const SideBackdropInfo = styled.div`
+    display: flex;
+    align-items: center;
+    height: 950px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        align-items: flex-start;
+  }
+`;
+
+export const WrapperInfo = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 590px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        width: 300px;
+    }
+    
+`;
+
+export const List = styled.ul`
+    color: ${({theme}) => theme.colors.white};
+    font-size: 24px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        font-size: 16px;
+  }
+`;
+
+export const ListItem = styled.li`
+    padding: 10px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        padding: 2px;
+  }
+`;
+
+export const Button = styled.button`
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 24px;
+    color: ${({theme}) => theme.colors.white};
+    background-color: ${({theme}) => theme.colors.jade};
+    transition: 0.5s;
+
+    &:hover {
+        background-color: ${({theme}) => theme.colors.salmon};
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        margin: 5px;
+        font-size: 16px;
+        padding: 10px;
+  }
+`;
+
+export const SubHeader = styled.h3`
+    font-weight: normal;
+    font-size: 40px;
+    color: ${({theme}) => theme.colors.white};
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        font-size: 20px;
+  }
 `;
