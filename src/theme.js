@@ -9,10 +9,18 @@ export const theme = {
         azureRadiance: "#1877F2",
         rose: "#E60073",
         cinnabar: "#EA4335",
-        salmon: "#ff8c69"
+        salmon: "#ff8c69",
+        halfWhite: "rgba(255,255,255,0.5)"
     },
 
     breakpoint: {
         mobileMax: "767px",
       },
 }
+
+export const DeviceSize = {
+    mobile: 768,
+    tablet: 992,
+    laptop: 1324,
+    desktop: 2024,
+  };
