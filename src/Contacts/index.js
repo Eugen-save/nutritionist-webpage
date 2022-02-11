@@ -52,7 +52,7 @@ export const Contacts = () => {
                             background: "#fff"
                         }}
                         required />
-                    <Textarea rows="5" type="text" placeholder="Комментарий" required />
+                    <Textarea rows="13" type="text" placeholder="Комментарий" required />
                     <Submit type="submit" value="Выслать" />
                 </Form>
                 <LinksWrapper>
