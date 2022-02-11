@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import logo from "./logoWhite.png";
 import background from "./brain-food.jpeg";
-import backgroundMobile from "./backdropMobile.jpeg";
 
 export const NavigationBar = styled.nav`
     width: 100%;
