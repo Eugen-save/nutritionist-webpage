@@ -12,6 +12,13 @@ export const Section = styled.section`
     padding: 20px;
     grid-template-areas: "head head"
                         "section1 section2";
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        grid-template-areas: "head"
+                            "section1"
+                            "section2";
+        margin-top: 60px;
+    }
 `;
 
 export const SectionHeader = styled.h2`
@@ -21,40 +28,60 @@ export const SectionHeader = styled.h2`
     grid-area: head;
     margin: 0;
     text-align: center;
-    color: ${({theme}) => theme.colors.white}
+    color: ${({theme}) => theme.colors.white};
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        font-size: 32px;
+        line-height: 32px;
+    }
 `;
 
 export const SectionItem = styled.div`
     grid-area: section1;
-    background-color: ${({theme}) => theme.colors.white};
+    background-color: ${({theme}) => theme.colors.halfWhite};
     box-shadow: 8px 8px 34px -10px rgba(24, 24, 27, 1);
     padding: 20px;
+    height: 500px;
 
     ${({section2}) =>
         section2 && css`
             grid-area: section2;
     `}
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        padding: 10px;
+        height: 400px;
+    }
 `;
 
 export const SubHeader = styled.h3`
     color: ${({theme}) => theme.colors.jade};
     text-align: center;
     font-size: 32px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        font-size: 20px;
+    }
 `;
 
 export const Description = styled.div`
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.105em;
     font-weight: 300;
 `;
 
-export const List = styled.ul`
+export const List = styled.ol`
     font-size: 24px;
-    list-style-type: none;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        font-size: 16px;
+    }
 `;
 
 export const ListItem = styled.li`
     padding: 10px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        padding: 5px;
+    }
 `;

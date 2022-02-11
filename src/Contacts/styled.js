@@ -6,6 +6,10 @@ export const Section = styled.section`
     max-height: 900px;
     margin: 0 auto;
     margin-top: 120px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        margin-top: 60px;
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -14,6 +18,11 @@ export const Wrapper = styled.div`
     grid-template-columns: 467px 467px;
     justify-content: center;
     gap: 40px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        grid-template-columns: none;
+        grid-template-rows: auto 1fr;
+    }
 `;
 
 export const Form = styled.form`
@@ -27,6 +36,11 @@ export const Form = styled.form`
     flex-wrap: nowrap;
     gap: 20px;
     background-color: rgba(255,255,255,0.5);
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        width: 350px;
+        height: 550px;;
+    }
 `;
 
 export const Input = styled.input`
@@ -35,9 +49,6 @@ export const Input = styled.input`
     background: none;
     padding: 20px;
     color: ${({theme}) => theme.colors.woodsmoke};
-
-
-    }
 `;
 
 export const Textarea = styled.textarea`
@@ -61,16 +72,23 @@ export const Submit = styled.input`
 
 export const SectionHeader = styled.h2`
     font-size: 64px;
-    line-height: 75px;
     letter-spacing: 0.05em;
     text-align: center;
     color: ${({theme}) => theme.colors.white};
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        font-size: 32px;
+    }
 `;
 
 export const SubHeader = styled.h3`
     font-size: 40px;
     text-align: center;
     color: ${({theme}) => theme.colors.white};
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        font-size: 16px;
+    }
 `;
 
 export const LinksWrapper = styled.div`
@@ -83,12 +101,21 @@ export const LinksWrapper = styled.div`
 `;
 
 export const Links = styled.a`
-    font-size: 24px;
-    color: ${({theme}) => theme.colors.white};
+    fill: ${({theme}) => theme.colors.white};
     padding: 10px;
     cursor: pointer;
-    border-radius: 15px;
     transition: all .8s;
+    width: 70x;
+    height: 70px;
+
+    &:hover {
+        fill: ${({theme}) => theme.colors.salmon};
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        width: 55px;
+        height: 55px;
+    }
 `;
 
 export const PosterContacts = styled.div`
@@ -98,6 +125,11 @@ export const PosterContacts = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow:  8px 8px 34px -10px rgba(24, 24, 27, 1);
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        width: 267px;
+        height: 400px;
+    }
 `;
 
 export const FormWrapper = styled.div`
@@ -105,4 +137,9 @@ export const FormWrapper = styled.div`
     grid-template-rows: 600px auto;
     gap: 20px;
     justify-content: center;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}) {
+        gap: 10px;
+        grid-template-rows: auto auto;
+    }
 `;
